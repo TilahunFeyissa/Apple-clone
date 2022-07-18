@@ -19,8 +19,8 @@ function YouTubeApi() {
   console.log(youtubevideos)
   return (
       <div>
-    <div className="row whole-section">
-    <div className="col-12  align-items-center justify-content-center text-center">
+    <div className="row  whole-section ">
+    <div className="col-12 row align-items-center justify-content-center text-center">
       <div className="text-center h1 font-weight-bold pt-5 pb-3">
         Latest videos
       </div >
@@ -34,8 +34,8 @@ function YouTubeApi() {
             let description=singleVideo.snippet.description
 
 let vidlink=(
-      <div className="vids col-4 container-fluid ">
-        <div className="singleVideoWrapper">
+      <div className="vids ">
+        <div className="singleVideoWrapper ">
           <a href={videolink}>
             {
               <img
@@ -48,18 +48,15 @@ let vidlink=(
             </div>
           </a>
 
-          <div className=" discription  ">
+          {/* <div className="discription">
             {description}
-          </div>
+          </div> */}
         </div>
       </div>)
       return (
-      <div key={i}>
+      <div key={i} className="col-sm-12 col-md-4">
         {vidlink}
       </div>)
-      
-    
-    
     }
   )}
   </div>
